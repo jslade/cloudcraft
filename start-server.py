@@ -42,7 +42,7 @@ def fetchServerState():
     return id
 
 def checkSocket(host, port):
-  print "Checking state of port %d on host %s host" % (port, host)
+  print "Checking state of port %d on host %s." % (port, host)
   with closing(socket.socket(socket.AF_INET, socket.SOCK_STREAM)) as sock:
     if sock.connect_ex((host, port)) == 0:
       print "Port is open, launching Minecraft client"
