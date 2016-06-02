@@ -40,7 +40,8 @@ while [[ "${counter}" -lt 10 ]] ; do
 
 done
 
-if [[ "${counter}" == 10 ]] ; do
-  stop-server
-done
-
+if [ "${counter}" -ge "10" ]
+then
+  echo "Shutting down now at `date`"
+  stop-server;
+fi
